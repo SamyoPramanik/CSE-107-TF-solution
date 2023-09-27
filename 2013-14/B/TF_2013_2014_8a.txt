@@ -1,0 +1,50 @@
+In Java, multiple inheritance, which is the ability for a class to inherit from more than one class, 
+is not supported for classes. However, it can be achieved through interfaces and limited multiple
+ inheritance for one class and multiple interfaces. Here's how it works:
+
+Single Inheritance for Classes:
+
+In Java, a class can inherit from only one class (single inheritance). This means that a class 
+can have at most one direct superclass.
+java
+Copy code
+class Parent {
+    // ...
+}
+
+class Child extends Parent {
+    // ...
+}
+Multiple Inheritance for Interfaces:
+
+Java allows a class to implement multiple interfaces. This is the way Java achieves multiple inheritance 
+of behavior.
+java
+Copy code
+interface InterfaceA {
+    void methodA();
+}
+
+interface InterfaceB {
+    void methodB();
+}
+
+class MyClass implements InterfaceA, InterfaceB {
+    public void methodA() {
+        // Implementation for methodA
+    }
+
+    public void methodB() {
+        // Implementation for methodB
+    }
+}
+In this example, MyClass implements both InterfaceA and InterfaceB, effectively inheriting behavior 
+from both interfaces.
+
+Regarding abstract classes in Java:
+
+An abstract class in Java can be declared as final. When an abstract class is marked as final, it means that 
+it cannot be subclassed. This effectively prevents any further inheritance from that abstract class.
+However, it's important to note that an abstract class that is marked as final cannot be extended or 
+subclassed by any other class. This is in contrast to non-abstract classes, which can be marked as final 
+to prevent subclassing but can also be instantiated directly.

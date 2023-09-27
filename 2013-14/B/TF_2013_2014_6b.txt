@@ -1,0 +1,28 @@
+Runnable State:
+
+The "runnable" state, also known as the "ready-to-run" state, represents a thread that is eligible to run but is waiting for its turn to execute.
+In this state, a thread has been created, and it has been started using the start() method. It is now 
+ready to execute its task but is waiting for the CPU scheduler to allocate processor time to it.
+Multiple runnable threads can exist, and the CPU scheduler determines the order in which they will 
+execute based on factors like thread priority, thread scheduling algorithm, and the availability 
+of CPU resources.
+
+
+Waiting State:
+
+The "waiting" state represents a thread that is temporarily not executing and is waiting for some 
+specific condition or event to occur before it can proceed.
+Threads can enter the waiting state voluntarily or involuntarily. Common scenarios include:
+Voluntary Waiting: A thread may enter the waiting state using methods like Thread.sleep(), 
+Object.wait(), or Thread.yield(). These methods allow a thread to pause or wait for a specified 
+duration or until notified by another thread.
+Involuntary Waiting: A thread can be put into the waiting state involuntarily when it is waiting 
+for some external event, such as I/O operations or synchronization locks. In these cases, the thread 
+is blocked until the event occurs.
+A thread in the waiting state is not eligible to execute until it transitions back to the runnable state. 
+This transition typically happens when the condition it was waiting for is satisfied, or when another 
+thread calls notify() or notifyAll() to wake up the waiting thread.
+In summary, the "runnable" state represents a thread that is ready to run but waiting for CPU time, 
+while the "waiting" state represents a thread that is not executing and is waiting for some specific 
+condition or event to proceed. Threads can transition between these states dynamically as they execute 
+in a multithreaded environment.

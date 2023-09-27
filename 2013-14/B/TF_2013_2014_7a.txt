@@ -1,0 +1,35 @@
+In Java, when you declare a variable in a class with the "protected" access modifier versus declaring 
+it with no modifier (default access), there are significant differences in terms of visibility and access:
+
+Protected Access Modifier:
+
+Variables declared with the "protected" access modifier are accessible within the same package and also 
+in subclasses (regardless of whether they are in the same package or not).
+This means that a protected variable can be accessed within the class it is declared in, all classes 
+within the same package, and any subclasses of the class, whether they are in the same package or not.
+Example:
+java
+Copy code
+package mypackage;
+
+public class MyClass {
+    protected int protectedVar;
+}
+No Modifier (Default Access):
+
+Variables declared with no access modifier (default access) are accessible only within the same package.
+They are not accessible outside the package, even if a subclass in a different package tries to access them.
+Example:
+java
+Copy code
+package mypackage;
+
+public class MyClass {
+    int defaultVar;
+}
+In summary, the key difference is in the scope of visibility:
+
+"protected" variables have broader visibility, accessible within the same package and in subclasses 
+(both within and outside the package).
+Variables with no modifier (default access) are accessible only within the same package and are not 
+visible outside the package, even in subclasses.

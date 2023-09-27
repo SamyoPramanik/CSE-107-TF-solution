@@ -1,0 +1,61 @@
+Static variables and methods in Java have specific properties:
+
+Properties of Static Variables:
+
+Static variables are also known as class variables.
+They are associated with the class itself, not with instances of the class.
+There is only one copy of a static variable shared among all instances of the class.
+Static variables are initialized only once, typically when the class is loaded.
+They are accessed using the class name, e.g., ClassName.staticVariable.
+Properties of Static Methods:
+
+Static methods belong to the class and not to any particular instance.
+They can be called using the class name, e.g., ClassName.staticMethod().
+Static methods cannot access or modify instance-specific data (non-static members) directly.
+They are often used for utility functions, such as mathematical calculations or helper methods that don't require access to instance-specific data.
+Now, let's explain dynamic method dispatch with an example in Java:
+
+Dynamic Method Dispatch is a mechanism in Java where the method that gets called on an object is determined at runtime, based on the actual type of the object. It's a fundamental concept in polymorphism.
+
+Example:
+
+java
+Copy code
+class Animal {
+    void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal1 = new Dog();
+        Animal myAnimal2 = new Cat();
+
+        myAnimal1.makeSound(); // Calls Dog's makeSound() at runtime
+        myAnimal2.makeSound(); // Calls Cat's makeSound() at runtime
+    }
+}
+In this example, we have an Animal class with a method makeSound(). 
+We also have two subclasses, Dog and Cat, each of which overrides the makeSound() method. 
+In the main method, we create objects of both Dog and Cat but assign them to references of type Animal.
+
+At runtime, when we call myAnimal1.makeSound(), it calls Dog's makeSound() method because myAnimal1 
+refers to a Dog object. Similarly, when we call myAnimal2.makeSound(), it calls Cat's makeSound() 
+method because myAnimal2 refers to a Cat object. This is dynamic method dispatch in action, where 
+the appropriate method is determined based on the actual type of the object at runtime, allowing for 
+polymorphic behavior.
