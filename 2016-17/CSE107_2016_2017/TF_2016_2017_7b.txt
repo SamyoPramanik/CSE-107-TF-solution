@@ -1,0 +1,11 @@
+Inline functions are functions that are not actually called but, rather, are expanded in line at
+the point of each call. The inline specifier is a request not a command to the compiler. 
+
+
+Advantages:
+1. Have no overhead of the function call and return mechanism
+2. Can be Executed much faster than normal function
+3. Safer than parameterized macros
+
+Disadvantages:
+1. If they are too large and are called too often then the program grows larger

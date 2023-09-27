@@ -1,0 +1,16 @@
+Purpose:
+    (=) : Assignment operator is used to assign to value of one object to another  after initialization. It's used
+    for creating a copy of an existing object.
+    Copy Constructor: It is used to create a new object as a copy of an existing object during its initialization.
+
+Syntax:
+    (=) : It is used as part of an assignment statement, like obj1 = obj2;
+    Copy Constructor : It is involked during the declaration and initialization of an object, like MyClass newObj = obj2;
+
+Usage:
+    (=) : Used for copying the contents of one object into another that already exists.
+    Copy Constructor : Used for creatign a new boject by copying the contents of an existing one.
+
+When Called:
+    (=): Called when an already initialized object is assigned the value of another object.
+    Copy Constructor : Called when a new boject is created as a copy of an existing object during its initialization.
