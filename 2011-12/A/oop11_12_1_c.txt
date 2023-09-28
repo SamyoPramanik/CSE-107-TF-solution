@@ -1,0 +1,9 @@
+A reference is an implicit pointer which acts like another name for a variable.
+Unlike pointers, once a reference becomes associated with a variable, it cannot refer to other variables
+
+References used in c++ programming in 3 ways:
+i.A reference can be passed to a function
+ii.A reference can be returned by a function
+iii.An independent reference can be created
+
+see oop11_12_1_c.cpp for the next question.

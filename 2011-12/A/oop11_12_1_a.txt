@@ -1,0 +1,31 @@
+a. 
+Functions that are not actually called but, 
+rather, are expanded in line, at the point of each call
+
+Advantage:
+i.Reducing the overhead of function call
+ii.Can be executed much faster than normal functions
+iii.Safer than parameterized macros
+
+Disadvantage:
+i.If they are too large and called too often, the program grows larger
+ii. During compile time, the compiler must generate inline functions 
+where the functions are called. Consequently, the code may
+become larger and the compiler took some extra time to 
+replace the calling site with the inline functions.
+
+void f1(){
+    for(int i=0, i<10, i++){
+        cout<<i;
+    }
+}
+
+while a function is declared as inline in the code, the compiler decides whether 
+it is treated as inline in compilation time or not.
+Sometimes the function containg loops and recursion is not inlined by the compiler 
+because it takes extra time and increasing overhead than the usual
+function calling. If there are multiple caliing site of f1 in the main function,
+overall size of code becomes larger and compiler takes extra time to replace all the calling site with 
+the inline f1(). That's why today's advanced computer architecture doesn't inline this f1() function.
+
+

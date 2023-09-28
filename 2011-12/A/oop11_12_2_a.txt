@@ -1,0 +1,15 @@
+In the given code there is no code snippet for copy constructor.
+Here is some observation if we don't use copy constructor in that code:
+
+While passing dyna obj through neg() function,copy constructor must be invoked 
+as we pass the object as pass by value. As there exists no copy constructor, the function
+performs bitwise copy while passing argument. 
+
+The original dyna obj and copied dyna obj share same int p pointer which means the p pointer of both of them 
+points to same address. So, while returning from the function the copied object will be destructed and 
+the allocated memory in the heap will be freed.
+
+
+After returning from the main function the original dyna obj will be destructed. But while it looks for making free 
+the allocated memory in the heap, compiler observes that this space is already freed previously. 
+That's why, program will be crashed by showing error:" Double free of object ".  
