@@ -12,12 +12,11 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    char c;
-    int count = 0;   // stores number of characters in file
-    while (fin >> c) // takes input until eof
-    {
-        count++;
-    }
+    char *c = new char;
+    int count = 0; // stores number of characters in file
+
+    fin.seekg(0, ios::end);
+    count = fin.tellg();
 
     cout << "File size: " << count << " bytes" << endl;
 }

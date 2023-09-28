@@ -33,7 +33,7 @@ public:
         if (sz == 0)
         {
             cout << "Queue is empty" << endl;
-            return 0;
+            return T();
         }
         T temp = arr[front];
         front = (front + 1) % 100;
@@ -65,25 +65,27 @@ int main()
     q3.push('b');
     q3.push('c');
 
-    cout << q1.pop() << endl;
-    cout << q1.size() << endl;
-    cout << q1.pop() << endl;
-    cout << q1.size() << endl;
+    cout << "q1 poped: " << q1.pop() << endl;
+    cout << "q1 size: " << q1.size() << endl;
+    cout << "q1 poped: " << q1.pop() << endl;
+    cout << "q1 size: " << q1.size() << endl;
+    cout << "q1 poped: " << q1.pop() << endl;
+    cout << "q1 size: " << q1.size() << endl;
+    cout << "q1 poped: " << q1.pop() << endl;
 
-    cout << q1.pop() << endl;
-    cout << q1.size() << endl;
+    cout << "q2 poped: " << q2.pop() << endl;
+    cout << "q2 size: " << q2.size() << endl;
+    cout << "q2 poped: " << q2.pop() << endl;
+    cout << "q2 size: " << q2.size() << endl;
+    cout << "q2 poped: " << q2.pop() << endl;
+    cout << "q2 size: " << q2.size() << endl;
+    cout << "q2 poped: " << q2.pop() << endl;
 
-    cout << q2.pop() << endl;
-    cout << q2.size() << endl;
-    cout << q2.pop() << endl;
-    cout << q2.size() << endl;
-    cout << q2.pop() << endl;
-    cout << q2.size() << endl;
-
-    cout << q3.pop() << endl;
-    cout << q3.size() << endl;
-    cout << q3.pop() << endl;
-    cout << q3.size() << endl;
-    cout << q3.pop() << endl;
-    cout << q3.size() << endl;
+    cout << "q3 poped: " << q3.pop() << endl;
+    cout << "q3 size: " << q3.size() << endl;
+    cout << "q3 poped: " << q3.pop() << endl;
+    cout << "q3 size: " << q3.size() << endl;
+    cout << "q3 poped: " << q3.pop() << endl;
+    cout << "q3 size: " << q3.size() << endl;
+    cout << "q3 poped: " << q3.pop() << endl;
 }
