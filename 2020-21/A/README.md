@@ -2,7 +2,7 @@
 
 ## a.
 
-Abstraction is a fundamental concept in object-oriented programming (OOP) that involves simplifying complex reality by modeling classes based on their essential characteristics. It allows you to hide the complex implementation details and expose only the necessary features to the outside world. [Abstruction example](/2020-21/A/solution1/1a.cpp)
+Abstraction is a fundamental concept in object-oriented programming (OOP) that involves simplifying complex reality by modeling classes based on their essential characteristics. It allows you to hide the complex implementation details and expose only the necessary features to the outside world. [Abstruction example](/2020-21/A/1a.cpp)
 
 **Properties of Abstruct class**
 1. Can not be instantiated
@@ -31,7 +31,7 @@ Abstraction is a fundamental concept in object-oriented programming (OOP) that i
 >The statement **"inline function is a request, not a command"** highlights the fact that when we declare a function as inline in C++, we are suggesting to the compiler that it should consider inlining the function's code at the call site. However, the compiler has the final say in whether it actually performs the inlining or not. In other words, marking a function as inline does not guarantee that the compiler will inline it; it is merely a suggestion.
 ---
 ## c.
-Find complete [code](/2020-21/A/solution1/1c.cpp) here
+Find complete [code](/2020-21/A/1c.cpp) here
 
 ```c++
 class tollbooth
@@ -102,22 +102,22 @@ We will lose the **power of default argument** if we want to access the function
 
 ---
 ## b.
-[solution](/2020-21/A/solution1/2b.cpp)
+[solution](/2020-21/A/2b.cpp)
 
 ---
 # Question 3
 
 ## a.
 **Early Binding (Static Binding):** Function call is linked to its implementation during compile-time. Efficient and has no runtime overhead. Used in statically-typed languages for normal function calls.
-[example](/2020-21/A/solution1/3a_1.cpp)
+[example](/2020-21/A/3a_1.cpp)
 
 **Late Binding (Dynamic Binding):** Function call is determined at runtime based on object's actual type or class. Associated with polymorphism and allows flexibility. Slightly slower due to runtime lookup. Used with polymorphism, virtual functions, and inheritance in languages like C++ or Java.
-[example](/2020-21/A/solution1/3a_2.cpp)
+[example](/2020-21/A/3a_2.cpp)
 
 ---
 ## b.
 
-[Solution](/2020-21/A/solution1/3b.cpp)
+[Solution](/2020-21/A/3b.cpp)
 
 ---
 ## c.
@@ -139,7 +139,7 @@ friend ostream &operator<<(ostream &stream, inventory &i)
         return stream;
     }
 ```
-[Complete code](/2020-21/A/solution1/3c.cpp)
+[Complete code](/2020-21/A/3c.cpp)
 
 ---
 ## d.
@@ -164,15 +164,15 @@ fills the empty position with '%'
 **left:**
 means the number will be left assigned and the empty position at right will be filled with setfill character
 
-Detailed [code](/2020-21/A/solution1/3d.cpp)
+Detailed [code](/2020-21/A/3d.cpp)
 
 ---
 # Question 4
 ## a.
-[solution](/2020-21/A/solution1/4a.cpp)
+[solution](/2020-21/A/4a.cpp)
 
 ---
 ## b.
-[solution](/2020-21/A/solution1/4b.cpp)
+[solution](/2020-21/A/4b.cpp)
 
 ---
