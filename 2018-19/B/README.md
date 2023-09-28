@@ -95,7 +95,7 @@ But if you are interested\
 # Question 8
 
 ## a.
-**auto-boxing**\
+### Auto-boxing
 When you assign a primitive value to a reference of a wrapper class, Java automatically converts the primitive to its corresponding wrapper class object. For example:
 
 ```java
@@ -104,7 +104,7 @@ Integer wrapperInt = primitiveInt; // Auto boxing
 ```
 In the above code, the **int** primitive **42** is automatically boxed into an **Integer** object, making it possible to use **wrapperInt** as an object with additional methods and features of the **Integer** class
 
-**auto-unboxing**\
+### Auto-unboxing
 Similarly, when you assign a wrapper class object to a primitive variable, Java automatically extracts the primitive value from the wrapper object. For example:
 
 ```java
