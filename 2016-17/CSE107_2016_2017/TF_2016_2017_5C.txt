@@ -5,8 +5,8 @@ Constructing
 Second line
 Third line
 In Process
-Constructing 
 Constructing
+Destructing
 Destructing
 Destructing
 Return line
