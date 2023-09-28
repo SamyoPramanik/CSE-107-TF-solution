@@ -1,0 +1,23 @@
+Write the general syntax for 
+(i) declaring a generic class 
+(ii) declaring a reference to a generic class and instance creation.
+
+Answer:
+    (i) declaring a generic class:
+        class ClassName<TypeParameter1, TypeParameter2, ...> {
+            // Class members and methods go here
+        }
+
+        <TypeParameter1, TypeParameter2, ...>: Placeholders for different data types the class will handle.
+
+
+    (ii) declaring a reference to a generic class and instance creation:
+
+        Declaring a reference to a generic class:
+            ClassName<TypeParameter1, TypeParameter2, ...> referenceName;
+
+        Creating an instance of the generic class
+            referenceName = new ClassName<TypeParameter1, TypeParameter2, ...>();
+        
+        <TypeParameter1, TypeParameter2, ...>: Placeholders for different data types the class will handle.
+

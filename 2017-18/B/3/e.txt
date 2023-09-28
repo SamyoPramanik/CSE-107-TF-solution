@@ -1,0 +1,2 @@
+Which of the operators can have default arguments when they are overloaded?
+    Only function call operator can have default argument.

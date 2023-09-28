@@ -1,0 +1,35 @@
+Why virtual base classes are used?
+Give an example of a class hierarchy where we must use virtual base class to avoid ambiguity. You do not need to write code.
+    
+    Virtual Base Class prevents a derived class to inherit more than one copy of the base class
+    This may happen when a derived class directly inherits two base classes and these base classes are also derived from another common base class
+    In this case, the derived class will have two copies of the common base class, which is not recommended
+    To avoid this problem, we make the base class virtual so that only one copy is inherited
+    
+    Example:
+        class A
+        {
+            public:
+                int a;
+        };
+        class B : virtual public A
+        {
+            public:
+                int b;
+        };
+        class C : virtual public A
+        {
+            public:
+                int c;
+        };
+        class D : public B, public C
+        {
+            public:
+                int d;
+        };
+        int main()
+        {
+            D obj;
+            obj.a = 10; // Would have had collision if virtual weren't used
+            return 0;
+        }

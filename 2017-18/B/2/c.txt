@@ -1,0 +1,3 @@
+What is the difference between 'delete' and 'delete []' operators?
+    'delete' operator used to deallocate memory that was allocated for a single object.
+    'delete []' operator used to deallocate memory that was allocated for an array of objects.

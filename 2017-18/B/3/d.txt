@@ -1,0 +1,9 @@
+Consider the following function declaration
+        void fl(int a=l, int b);
+Is this a valid declaration?
+If yes, then what does it mean? If no, then what is the problem?
+
+Answer:
+    This is not a valid declaration.
+    While specifying non-default values, we have to start from the leftmost
+    parameter and move to the right one by one. Since non-default value b is in the right of default values a it will cause ambiguity and thus error.
