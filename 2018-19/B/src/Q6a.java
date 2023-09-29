@@ -1,8 +1,4 @@
 interface i1 {
-    default void f1() {
-
-    }
-
     static void f2() {
 
     }

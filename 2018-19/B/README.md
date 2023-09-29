@@ -41,10 +41,6 @@ Use variable argumnet concept [code](./src/Q5c.java) here
 class c2 be like this [code](./src/Q6a.java)
 ```java
 class c2 extends c1 implements i2 {
-    public void f1() {
-
-    }
-
     public void f3() {
     }
 
