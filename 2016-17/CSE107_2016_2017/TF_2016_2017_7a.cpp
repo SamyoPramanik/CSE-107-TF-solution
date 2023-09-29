@@ -44,9 +44,9 @@ class MyInt{
     MyInt & operator=(MyInt & num){
         *this->x = num.getX();
         // MyInt newInt(*x);
-        MyInt* niceInt = new MyInt(*x);
-
-        return *niceInt;
+        // its a convention and a good practice to return *this pointer in case of assignment operator overloading
+        // thus i changed it
+        return *this;
     }
 };
 
