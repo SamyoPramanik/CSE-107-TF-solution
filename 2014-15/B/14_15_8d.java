@@ -17,7 +17,6 @@ enum EPL
 }
 public class tf {
     public static void main(String[] args) {
-       //need to find out the point difference between Manchester United and Liverpool
          int positionDiffnc=EPL.Liverpool.position-EPL.ManUnited.position;
          System.out.println(positionDiffnc);
     }
