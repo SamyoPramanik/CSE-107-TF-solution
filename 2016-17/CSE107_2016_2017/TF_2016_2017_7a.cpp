@@ -37,13 +37,13 @@ class MyInt{
         // cout << "destructor called " << endl;
     }
 
-    MyInt operator+(MyInt & num){
+    MyInt & operator+(MyInt & num){
         MyInt * newInt = new MyInt(*x + *num.x);
         return *newInt;
         
     }
 
-    MyInt operator*(int num){
+    MyInt & operator*(int num){
         MyInt *newInt = new MyInt(*x * num);
         return *newInt;
         
