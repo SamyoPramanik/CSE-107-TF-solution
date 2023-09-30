@@ -1,0 +1,14 @@
+    What are the advantages of multithreading over process based multitasking?
+    
+    Answer:
+        The advantages of multithreading over process-based multitasking in a more concise form:
+            Efficiency: Threads are lighter and faster to create than processes.
+            Resource Sharing: Threads easily share data and resources.
+            Responsiveness: Multithreading keeps applications responsive.
+            Resource Utilization: Threads maximize CPU and resource use.
+            Simplified Communication: Threads communicate efficiently.
+            Modularity: Promotes organized and modular code.
+            Scalability: Easily adjust the number of threads.
+            Faster Context Switching: Threads switch context more quickly.
+            Low Overhead: Less overhead for thread management.
+            Real-time Processing: Ideal for real-time and event-driven tasks.

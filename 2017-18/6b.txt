@@ -1,0 +1,19 @@
+When and why will you make a function inline?
+    In C++, the inline specifier is used to suggest that a function should be inlined.
+    Inlining is a technique where the compiler replaces a function call with the actual body of the function during compilation,
+    which can lead to performance improvements by reducing the overhead of function call and return.
+
+    Small Functions: Typically, you should mark small, frequently used functions as inline. These functions often have a relatively small amount of code.
+    Performance Critical Code: Use inline for functions called in performance-critical sections of your code where you want to minimize the function call overhead.
+
+When may a compiler ignore this specifier?
+    The inline specifier is a hint to the compiler, not a command. The compiler can choose to ignore it.
+    The compiler might ignore the inline specifier for large or complex functions. It's typically not inlined for functions with a lot of code or those involving loops and recursion.
+    Some compilers will not in-line a function if it contains
+         A static variable 
+         A loop, switch or goto 
+         A return statement 
+         If the function is recursive
+
+When does automatic in-lining take place?
+    Defining a member function inside the class declaration causes the function to automatically become an in-line function

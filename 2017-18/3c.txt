@@ -1,0 +1,8 @@
+Explain briefly dynamic method dispatching.
+    Dynamic method dispatch is a concept in object-oriented programming where the method 
+    executed is determined at runtime based on the actual object type. 
+    It allows subclasses to provide their own method implementation. 
+    This is achieved through method overriding and polymorphism, offering flexibility and extensibility in the code.
+
+
+// Note : If the question mentioned the provide example or the question was assigned with significant marks then do proivde a SIMPLE example like i have given in c.Java

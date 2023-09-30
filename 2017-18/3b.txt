@@ -1,0 +1,12 @@
+What is a type wrapper? Name any three type wrappers. Why are type wrappers needed?
+    Answer:
+        Type wrapper is a class whose objects which are used to encapsualte the corresponding primitive type.
+        
+        Three type wrappers are:
+            1. Integer
+            2. Character
+            3. Boolean
+
+        We can’t pass a primitive type by reference to a method.
+        Also many of the standard data structures implemented by Java operate on objects, which means that you can’t use these data structures to store primitive types
+        So, we need type wrappers to pass primitive types by reference to a method and to store primitive types in data structures.
