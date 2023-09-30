@@ -13,7 +13,7 @@ class person{
         this->age = age;
     }
 
-    //virtual function
+    //non virtual function
     void show(){
         cout<<"person-> name: "<<name<<" age: "<<age<<endl;
     }
@@ -42,7 +42,7 @@ int main(int argc, char const *argv[])
     student stu("Robin",21,19);
     person &base = stu;
 
-    base.show();
+    base.show();//early binding
    
     return 0;
 }
