@@ -7,14 +7,24 @@ using namespace std;
 
 // You might try to just normally initialise MyInt(value) and see what happens inside the operator overloading functions
 
+class MyInt;
 class MyInt{
     int * x;
+    static MyInt obj;
     public:
+
+    MyInt(){
+        x = new int;
+        *x = 0;
+    }
+
     MyInt(int argx){
         x = new int;
         *x = argx;
-        // cout << "Constructor called" << endl;
+        cout << "Constructor called" << endl;
     }
+
+    
 
     int getX() const{
         return *x;
@@ -25,30 +35,35 @@ class MyInt{
     }
 
     ~MyInt(){
+
         delete x;
-        // cout << "destructor called " << endl;
+        cout << "destructor called " << endl;
     }
 
-    MyInt& operator+(MyInt & num){
+    MyInt operator+(MyInt & num){
         MyInt * newInt = new MyInt(*x + *num.x);
         return *newInt;
+        
     }
 
-    MyInt& operator*(int num){
+    MyInt operator*(int num){
         MyInt *newInt = new MyInt(*x * num);
         return *newInt;
+        
     }
 
     friend MyInt& operator*(int num, MyInt & customInt);
 
     MyInt & operator=(MyInt & num){
         *this->x = num.getX();
-        // MyInt newInt(*x);
+        MyInt * newInt = new MyInt(*num.x);
         // its a convention and a good practice to return *this pointer in case of assignment operator overloading
         // thus i changed it
-        return *this;
+        return *newInt;
     }
 };
+
+MyInt MyInt::obj;
 
 MyInt & operator*(int num, MyInt& customInt){
     MyInt * newInt = new MyInt(num * customInt.getX());
