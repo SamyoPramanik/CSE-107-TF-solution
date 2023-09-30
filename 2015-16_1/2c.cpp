@@ -11,14 +11,12 @@ class Coord
 public:
     Coord()
     {
-        cout << "constructing" << endl;
         x = y = 0;
         pointname = NULL;
     }
 
     Coord(int x, int y, char *name)
     {
-        cout << "constructing" << endl;
         this->x = x;
         this->y = y;
         pointname = new char[strlen(name)];
@@ -27,21 +25,28 @@ public:
 
     Coord(const Coord &cd)
     {
-        cout << "copy constructor" << endl;
         this->x = cd.x;
         this->y = cd.y;
-        pointname = new char[strlen(cd.pointname)];
+        pointname = new char[strlen(cd.pointname) + 1];
         strcpy(pointname, cd.pointname);
     }
 
-    Coord operator+(Coord c)
+    Coord operator=(const Coord &cd)
     {
-        cout << "addition" << endl;
+        this->x = cd.x;
+        this->y = cd.y;
+        pointname = new char[strlen(cd.pointname) + 1];
+        strcpy(pointname, cd.pointname);
+        return *this;
+    }
+
+    Coord operator+(Coord &c)
+    {
         Coord temp;
         temp.x = x = c.x;
         temp.y = y + c.y;
         int len = strlen(pointname) + strlen(c.pointname);
-        temp.pointname = new char[len];
+        temp.pointname = new char[len + 1];
         strcpy(temp.pointname, pointname);
         strcat(temp.pointname, c.pointname);
 
@@ -61,12 +66,12 @@ public:
     ~Coord()
     {
         delete[] pointname;
-        cout << "destructed" << endl;
     }
 
-    friend ostream &operator<<(ostream &out, Coord c)
+    friend ostream &operator<<(ostream &out, Coord &c)
     {
-        out << c.pointname << " -> " << c.x << " " << c.y;
+        out << "(" << c.x << ", " << c.y << ") ";
+        return out;
     }
 };
 
@@ -79,12 +84,15 @@ int main()
 {
     Coord ob1, ob2, ob3;
     Coord ob4(0, 0, "origin");
-    Coord ob5(12, 5, "first");
+    Coord ob5(6, 8, "first");
+    cout << "ob4 = " << ob4 << endl;
+    cout << "ob5 = " << ob5 << endl;
+
     ob1 = ob4 + ob5;
     print(ob1);
 
-    ob2 = 100 + ob4;
-    print(ob2);
+    double val = 100 + double(ob5);
+    cout << val << endl;
 
     double value = ob5;
     cout << "value of ob5 = " << value << endl;
