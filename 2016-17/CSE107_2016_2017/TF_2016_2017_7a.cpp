@@ -10,18 +10,15 @@ using namespace std;
 class MyInt;
 class MyInt{
     int * x;
-    static MyInt obj;
+    
     public:
 
-    MyInt(){
-        x = new int;
-        *x = 0;
-    }
+    
 
     MyInt(int argx){
         x = new int;
         *x = argx;
-        cout << "Constructor called" << endl;
+        // cout << "Constructor called" << endl;
     }
 
     
@@ -37,7 +34,7 @@ class MyInt{
     ~MyInt(){
 
         delete x;
-        cout << "destructor called " << endl;
+        // cout << "destructor called " << endl;
     }
 
     MyInt operator+(MyInt & num){
@@ -57,13 +54,11 @@ class MyInt{
     MyInt & operator=(MyInt & num){
         *this->x = num.getX();
         MyInt * newInt = new MyInt(*num.x);
-        // its a convention and a good practice to return *this pointer in case of assignment operator overloading
-        // thus i changed it
         return *newInt;
     }
 };
 
-MyInt MyInt::obj;
+
 
 MyInt & operator*(int num, MyInt& customInt){
     MyInt * newInt = new MyInt(num * customInt.getX());
