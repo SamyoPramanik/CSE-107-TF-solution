@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
     student stu("Robin",21,19);
     person &base = stu;
 
-    base.show();
+    base.show();//late binding
     base.job();
     return 0;
 }
